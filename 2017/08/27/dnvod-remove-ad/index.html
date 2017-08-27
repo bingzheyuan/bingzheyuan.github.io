@@ -9,16 +9,16 @@
 <meta name="keywords" content="JS,hack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="去除多瑙广告">
-<meta property="og:url" content="http://yoursite.com/2017/08/27/dnvod-remove-ad/index.html">
+<meta property="og:url" content="https://bingzheyuan.github.io/2017/08/27/dnvod-remove-ad/index.html">
 <meta property="og:site_name" content="冰哲远的空间">
 <meta property="og:description" content="去除多瑙广告">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2017/08/27/dnvod-remove-ad/dnvod-remove-ad/settings.jpg">
-<meta property="og:updated_time" content="2017-08-27T12:44:09.086Z">
+<meta property="og:image" content="https://bingzheyuan.github.io/2017/08/27/dnvod-remove-ad/settings.jpg">
+<meta property="og:updated_time" content="2017-08-27T13:02:02.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="去除多瑙广告">
 <meta name="twitter:description" content="去除多瑙广告">
-<meta name="twitter:image" content="http://yoursite.com/2017/08/27/dnvod-remove-ad/dnvod-remove-ad/settings.jpg">
+<meta name="twitter:image" content="https://bingzheyuan.github.io/2017/08/27/dnvod-remove-ad/settings.jpg">
     
 
     
@@ -176,7 +176,7 @@
                     
                     
                     <td>
-                        <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                        <a href="https://github.com/bingzheyuan" target="_blank" title="github" class=tooltip>
                             <i class="fa fa-github"></i>
                         </a>
                     </td>
@@ -271,7 +271,8 @@
 <li>在chrome中安装这个插件<code>Custom JS for website</code>(<a href="https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija" target="_blank" rel="external">点我进入传送门</a>)</li>
 <li>安装插件后，打开多瑙网站，随便点开一个视频。</li>
 <li>左键点击该插件图标，是个蓝色的不清晰的图标</li>
-<li><p>出现一个设置框，如下图，勾选 <code>enble cjs for this host</code>, 并在框内填入以下代码<br><img src="./dnvod-remove-ad/settings.jpg" alt="test"></p>
+<li><p>出现一个设置框，如下图，勾选 <code>enble cjs for this host</code>, 并在框内填入以下代码</p>
+<img src="/2017/08/27/dnvod-remove-ad/settings.jpg" alt="settings" title="settings">
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.frontAdStartHandler = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        CKobject.getObjectById(_VideoOptions.ckid).removeListener(<span class="string">'frontAdStart'</span>, <span class="string">'frontAdStartHandler'</span>);</div><div class="line">        $(<span class="string">"body"</span>).trigger(<span class="string">"filterAds"</span>);</div><div class="line">    &#125;,<span class="number">200</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>点击保存后，页面会自动刷新，运气好的话你会看到广告闪一下就没了，影片也自动播放了。如果硬盘没有自动播放，可以适当增加上面代码中最后一个数字，我用的是<code>200</code>，但是跟网速有关，加到<code>500</code>我觉得怎么也够了。</p>
@@ -293,7 +294,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/08/27/dnvod-remove-ad/" data-id="cj6uq98dp0000lwkcyh1cplqk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://bingzheyuan.github.io/2017/08/27/dnvod-remove-ad/" data-id="cj6uqvo720000fskcnhs4mlj2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -361,8 +362,6 @@
 
             
     
-        <a href="http://yoursite.com/2017/08/27/dnvod-remove-ad/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/08/27/dnvod-remove-ad/">评论</a>
-    
 
         </footer>
     </div>
@@ -374,12 +373,6 @@
 
 
     
-    
-        <section id="comments">
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-</section>
     
 
 </section>
@@ -467,23 +460,6 @@
     </div>
 </footer>
         
-    
-    <script>
-    var disqus_config = function () {
-        
-            this.page.url = 'http://yoursite.com/2017/08/27/dnvod-remove-ad/';
-        
-        this.page.identifier = 'dnvod-remove-ad';
-    };
-    (function() { 
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-
-
 
 
     
