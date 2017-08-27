@@ -260,7 +260,8 @@
 <p>原理放到后面讲，这里先放步骤</p>
 </blockquote>
 <ol>
-<li>在chrome中安装这个插件<code>Custom JS for website</code>(<a href="https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija" target="_blank" rel="external">点我进入传送门</a>)</li>
+<li>先在chrome中安装这个插件<code>Adblock Plus</code>(<a href="https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb" target="_blank" rel="external">点我进传送门</a>)，目前尚不清楚为何依赖于他，但是不需要其他设置，在多瑙上激活它既可。</li>
+<li>再安装这个插件<code>Custom JS for website</code>(<a href="https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija" target="_blank" rel="external">点我进入传送门</a>)</li>
 <li>安装插件后，打开多瑙网站，随便点开一个视频。</li>
 <li>左键点击该插件图标，是个蓝色的不清晰的图标</li>
 <li><p>出现一个设置框，如下图，勾选 <code>enble cjs for this host</code>, 并在框内填入以下代码</p>
@@ -273,9 +274,8 @@
 <h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><blockquote>
 <p>暂无</p>
 </blockquote>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><blockquote>
-<p>有空再写，看了懂了那段代码的感觉自然就懂了</p>
-</blockquote>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>在点击用金币去掉广告的代码中，关键性的一句就是<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>).trigger(<span class="string">"filterAds"</span>);</div></pre></td></tr></table></figure></p>
+<p>于是我们只需要在播放加载完成后，首先调用这句话即可。然而目前尚不清楚为何该方法依赖于<code>Adblock Plus</code>。</p>
 
         
         </div>
@@ -286,7 +286,7 @@
 
 </div>
 
-    <a data-url="https://bingzheyuan.github.io/2017/08/27/dnvod-remove-ad/" data-id="cj6uqvo720000fskcnhs4mlj2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://bingzheyuan.github.io/2017/08/27/dnvod-remove-ad/" data-id="cj6uspwrp00008skctgnsogf4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
