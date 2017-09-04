@@ -266,7 +266,7 @@
 <li>左键点击该插件图标，是个蓝色的不清晰的图标</li>
 <li><p>出现一个设置框，如下图，勾选 <code>enble cjs for this host</code>, 并在框内填入以下代码</p>
 <img src="/2017/08/27/dnvod-remove-ad/settings.jpg" alt="settings" title="settings">
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.frontAdStartHandler = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        CKobject.getObjectById(_VideoOptions.ckid).removeListener(<span class="string">'frontAdStart'</span>, <span class="string">'frontAdStartHandler'</span>);</div><div class="line">        $(<span class="string">"body"</span>).trigger(<span class="string">"filterAds"</span>);</div><div class="line">    &#125;,<span class="number">200</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.frontAdStartHandler = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        $(<span class="string">"body"</span>).trigger(<span class="string">"filterAds"</span>);</div><div class="line">    &#125;,<span class="number">200</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>点击保存后，页面会自动刷新，运气好的话你会看到广告闪一下就没了，影片也自动播放了。如果硬盘没有自动播放，可以适当增加上面代码中最后一个数字，我用的是<code>200</code>，但是跟网速有关，加到<code>500</code>我觉得怎么也够了。</p>
 </li>
@@ -286,7 +286,7 @@
 
 </div>
 
-    <a data-url="https://bingzheyuan.github.io/2017/08/27/dnvod-remove-ad/" data-id="cj6uspwrp00008skctgnsogf4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://bingzheyuan.github.io/2017/08/27/dnvod-remove-ad/" data-id="cj76jeslf00004gkc118pbhh3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
